@@ -1,0 +1,166 @@
+@charset "utf-8";
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(162, 252, 196, 0.603);
+    height: 100vh;
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    width: 343px;
+    height: 612px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px #5f5f5f;
+}
+
+.container .head-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.container .head-box .head{
+    margin: 16px 0;
+    color: #343434;
+    font-size: 24px;
+}
+.container .head-box .sub{
+    margin: 16px 0;
+    font-weight: bold;
+    color: #838383;
+}
+.container form{
+    margin: 0 auto;
+    margin-top: 16px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid #ccf0de;
+    width: 80%;
+}
+.container form input{
+    padding: 8px 0;
+    padding-left: 16px;
+    padding-right: 24px;
+    background-color: rgb(242, 250, 240);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.container form input:focus::-webkit-input-placeholder{ /* WebKit browsers */
+  color:transparent;
+}
+.container form .plus{
+    border: none;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(124, 228, 111);
+    border-radius: 5px;
+    margin-left: 24px;
+    position: relative;
+}
+
+.container form .plus span{
+    display: inline-block;
+    width: 25px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.container form .plus span:last-child{
+    transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.container .toDos{
+    margin: 0 auto;
+    margin-top: 32px;
+    width: 80%;
+    height: 340px;
+    text-align: left;
+    overflow: scroll;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ccf0de;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+.container .toDos::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+}
+
+
+.container .toDos .todo{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+.container .toDos .todo:last-child{
+    margin-bottom: 0;
+}
+
+.container .toDos .todo:hover .btn-box .x-btn{
+    opacity: 1;
+}
+
+.container .toDos .todo .contant{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .toDos .todo .contant label{
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #5ccf95;
+    transition: all 0.35s;
+}
+.container .toDos .todo .contant input[class="check"]:checked ~ label{
+    background-color: #5ccf95;
+}
+.container .toDos .todo .contant input[type="checkbox"]{
+    display: none;
+}
+
+.container .toDos .todo .contant span{
+    display: block;
+    width: 200px;
+    word-break: break-all;
+    margin-left: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5f5f5f;
+    opacity: 1;
+}
+.container .toDos .todo .btn-box .x-btn{
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    transition: all 0.35s;
+    opacity: 0;
+}
+.container .toDos .todo .btn-box .x-btn img{
+    opacity: .5;
+}
+
+.container .reset{
+    background-color:rgb(185, 185, 185);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 34px;
+    margin-top: 24px;
+    font-weight: bold;
+}
